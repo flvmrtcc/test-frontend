@@ -1,9 +1,19 @@
-import { useContext } from "react";
+import { useState } from "react";
 import UsersList from "../components/UsersList";
-import { UsersContext } from "../UsersContext";
+import { useUsersContext } from "../UsersContext";
 
 export default function Home() {
-    const usersData = useContext(UsersContext);
+    const usersData = useUsersContext();
+    const [usersChecked, setUsersChecked] = useState([1, 5]);
+    const usersCheckedData = [];
+
+    usersData.map((user) => {
+        if (usersChecked.some(item => user.id.toString() === item.toString())){
+            usersCheckedData.push(user);
+        }
+        return null;
+    })
+
 
     return (
         <div className="">
@@ -11,7 +21,7 @@ export default function Home() {
 
             <div className="flexcontainer">
                 <UsersList listName={"Utenti disponibili"} usersData={usersData} />
-                <UsersList listName={"Utenti controllati"} usersData={[]} />
+                <UsersList listName={"Utenti controllati"} usersData={usersCheckedData} />
             </div>
 
         </div>

@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
 import UserProfile from "../components/UserProfile";
-import { UsersContext } from "../UsersContext";
-import { useContext } from "react";
+import { useUsersContext } from "../UsersContext";
 
 export default function UserPage() {
     const { userID } = useParams();
-    const usersData = useContext(UsersContext);
+    const usersData = useUsersContext();
 
     const user = usersData.find((user) => {
         return user.id.toString() === userID.toString();
