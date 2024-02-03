@@ -1,5 +1,8 @@
 body{
-  background-color: aliceblue;
+  background-image: url("../public/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .flexcontainer {
@@ -7,33 +10,49 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
   row-gap: 50px;
+
+  padding: 10px;
+  margin-bottom: 50px;
 }
 
 .users-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  min-height: 400px;
-  background-color: aquamarine;
   row-gap: 10px;
+
+  width: 45%;
+  min-height: 400px;
+  min-width: 300px;
+  background-color: aliceblue;
+  opacity: 0.9;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 2px #9393936b;
 }
 
 .user {
   display: flex;
   flex-direction: row;
-  height: 80px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+
   border: 1px solid gray;
   width: 90%;
   overflow: hidden;
+  padding: 10px;
 }
 
-.rightUserProfile{
-  width: 80%;
+.userListData{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  height: 80%;
 }
 
 @media (max-width: 800px) {
@@ -44,6 +63,34 @@ body{
 
 .avatar {
   border-radius: 50%;
-  height: 80%;
+  height: 60px;
   max-width: 80%;
+}
+
+.userListCompleteName{
+  color: black;
+  /* font-weight: bold; */
+  font-size: large;
+}
+
+
+
+
+
+.user-profile-container{
+  width: 80%;
+  min-height: 400px;
+  height: 100%;
+  background-color: aliceblue;
+  opacity: 0.9;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  box-shadow: 5px 5px 2px #9393936b;
+}
+
+.user-profile-data-user-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
 }
