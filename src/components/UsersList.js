@@ -2,7 +2,7 @@ import User from "./User";
 
 export default function UsersList({ listName = "Lista utenti", usersData = [] }) {
     return (
-        <div className="users-list border border-secondary rounded rounded-3 border-3">
+        <div className="users-list box-style border border-secondary rounded rounded-3 border-3">
             <h2>{listName}</h2>
             {
                 usersData.length > 0 ?
