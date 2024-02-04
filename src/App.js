@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import UserPage from './pages/UserPage';
 import ErrorPage from './pages/ErrorPage';
 import { UsersProvider } from './UsersContext';
+import { UsersCheckedProvider } from './UsersCheckedContext';
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <UsersProvider>
-      <RouterProvider router={router} />
+      <UsersCheckedProvider>
+        <RouterProvider router={router} />
+      </UsersCheckedProvider>
     </UsersProvider>
   );
 }

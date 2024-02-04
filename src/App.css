@@ -18,7 +18,7 @@ body{
 
 .box-style{
   background-color: aliceblue;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   padding-top: 20px;
   padding-bottom: 30px;
   box-shadow: 5px 5px 2px #9393936b;
@@ -75,13 +75,6 @@ body{
 .userListCompleteName{
   color: black;
   font-size: large;
-}
-
-
-.user-profile-container{
-  width: 80%;
-  min-height: 400px;
-  height: 100%;
 }
 
 .user-profile-data-user-container{

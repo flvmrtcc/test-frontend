@@ -1,14 +1,14 @@
-import { useState } from "react";
 import UsersList from "../components/UsersList";
 import { useUsersContext } from "../UsersContext";
+import { useUsersCheckedContext } from "../UsersCheckedContext";
 
 export default function Home() {
     const usersData = useUsersContext();
-    const [usersChecked, setUsersChecked] = useState([1, 5]);
+    const [usersChecked] = useUsersCheckedContext();
     const usersCheckedData = [];
 
     usersData.map((user) => {
-        if (usersChecked.some(item => user.id.toString() === item.toString())){
+        if (usersChecked.some(item => user.id.toString() === item.toString())) {
             usersCheckedData.push(user);
         }
         return null;
