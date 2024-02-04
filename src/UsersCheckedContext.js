@@ -7,7 +7,7 @@ export function useUsersCheckedContext() {
 }
 
 export function UsersCheckedProvider({ children }) {
-    const [usersChecked, setUsersChecked] = useState([1, 3]);
+    const [usersChecked, setUsersChecked] = useState([]);
 
     function addUserToChecked(userID) {
         setUsersChecked([userID, ...usersChecked]);

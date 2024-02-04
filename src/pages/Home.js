@@ -7,8 +7,13 @@ export default function Home() {
     const [usersChecked] = useUsersCheckedContext();
     const usersCheckedData = [];
 
+
+    function isUserChecked(user) {
+        return usersChecked.some(item => user.id.toString() === item.toString());
+    }
+
     usersData.map((user) => {
-        if (usersChecked.some(item => user.id.toString() === item.toString())) {
+        if (isUserChecked(user)) {
             usersCheckedData.push(user);
         }
         return null;
